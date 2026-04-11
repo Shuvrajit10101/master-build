@@ -341,9 +341,11 @@ class EagleParticles {
         const dx   = x - this.mouse.x;
         const dy   = y - this.mouse.y;
         const dist = Math.sqrt(dx * dx + dy * dy);
-        const repelRadius = window.innerWidth < 768 ? 50 : 70;
+        const repelRadius = window.innerWidth < 768 ? 60 : 70;
         if (dist < repelRadius && dist > 0) {
-          const force = (1 - dist / repelRadius) * 20;
+          // Smooth cubic falloff — feels buttery instead of harsh
+          const normalizedDist = dist / repelRadius;
+          const force = Math.pow(1 - normalizedDist, 2) * (window.innerWidth < 768 ? 15 : 20);
           x += (dx / dist) * force;
           y += (dy / dist) * force;
         }
@@ -425,8 +427,12 @@ class EagleParticles {
 
   onTouchMove(e) {
     if (e.touches.length > 0) {
-      this.mouse.x = e.touches[0].clientX - window.innerWidth / 2;
-      this.mouse.y = -(e.touches[0].clientY - window.innerHeight / 2);
+      var targetX = e.touches[0].clientX - window.innerWidth / 2;
+      var targetY = -(e.touches[0].clientY - window.innerHeight / 2);
+
+      // Smooth interpolation — don't jump directly to finger position
+      this.mouse.x += (targetX - this.mouse.x) * 0.3;
+      this.mouse.y += (targetY - this.mouse.y) * 0.3;
     }
   }
 
