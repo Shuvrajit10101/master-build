@@ -404,13 +404,33 @@
 @media (max-width: 768px) {
   .work-title      { font-size: 32px; }
   .work-hero       { padding: 120px 0 60px; }
-  .portfolio-card  { height: 260px; }
+  .portfolio-card  { height: auto; min-height: 280px; }
   .portfolio-content { padding: 28px; }
   .portfolio-content h3 { font-size: 22px; }
-  .portfolio-results { gap: 16px; }
+  .portfolio-results { gap: 16px; flex-wrap: wrap; }
   .services-grid   { grid-template-columns: 1fr; }
   .packages-grid   { grid-template-columns: 1fr; }
   .section-heading { font-size: 30px; }
+
+  /* Show all portfolio details on mobile — no hover needed */
+  .portfolio-details {
+    max-height: none;
+    opacity: 1;
+  }
+
+  .portfolio-link {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .portfolio-content {
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 50%, rgba(0,0,0,0.4) 100%);
+  }
+
+  .portfolio-tech span {
+    font-size: 10px;
+    padding: 3px 8px;
+  }
 }
 
 @media (max-width: 480px) {

@@ -49,6 +49,9 @@ class EagleParticles {
     if (window.innerWidth > 768) {
       window.addEventListener('mousemove', this.onMouseMove.bind(this));
     }
+    // Touch support for mobile — particles react to finger
+    window.addEventListener('touchmove', this.onTouchMove.bind(this), { passive: true });
+    window.addEventListener('touchend', this.onTouchEnd.bind(this));
     window.addEventListener('scroll', this.onScroll.bind(this), { passive: true });
   }
 
@@ -129,9 +132,19 @@ class EagleParticles {
           }
         }
 
-        // Scale eagle to 60% of viewport height; shift up for text room below
-        const viewportScale = (window.innerHeight * 0.60) / sh;
-        const yOffset = 35;
+        // Scale eagle to viewport height — smaller on mobile for text room
+        let viewportScale;
+        let yOffset;
+        if (window.innerWidth < 480) {
+          viewportScale = (window.innerHeight * 0.30) / sh;
+          yOffset = 80;
+        } else if (window.innerWidth < 768) {
+          viewportScale = (window.innerHeight * 0.38) / sh;
+          yOffset = 65;
+        } else {
+          viewportScale = (window.innerHeight * 0.60) / sh;
+          yOffset = 35;
+        }
 
         // Sample candidates to reach particleCount
         let selected = [];
@@ -323,12 +336,12 @@ class EagleParticles {
         y = target.y + Math.cos(elapsed * breathSpeed * 0.6 + i * 0.12) * breathAmount;
       }
 
-      // Mouse repulsion (desktop only)
-      if (window.innerWidth > 768) {
+      // Mouse/touch repulsion (all screen sizes, smaller radius on mobile)
+      {
         const dx   = x - this.mouse.x;
         const dy   = y - this.mouse.y;
         const dist = Math.sqrt(dx * dx + dy * dy);
-        const repelRadius = 70;
+        const repelRadius = window.innerWidth < 768 ? 50 : 70;
         if (dist < repelRadius && dist > 0) {
           const force = (1 - dist / repelRadius) * 20;
           x += (dx / dist) * force;
@@ -408,6 +421,18 @@ class EagleParticles {
   onMouseMove(e) {
     this.mouse.x =   e.clientX - window.innerWidth  / 2;
     this.mouse.y = -(e.clientY - window.innerHeight / 2);
+  }
+
+  onTouchMove(e) {
+    if (e.touches.length > 0) {
+      this.mouse.x = e.touches[0].clientX - window.innerWidth / 2;
+      this.mouse.y = -(e.touches[0].clientY - window.innerHeight / 2);
+    }
+  }
+
+  onTouchEnd() {
+    this.mouse.x = 99999;
+    this.mouse.y = 99999;
   }
 
   onScroll() {
