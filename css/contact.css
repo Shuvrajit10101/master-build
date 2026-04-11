@@ -1,0 +1,301 @@
+/* ============================================
+   APEX AUTOMATIONS — Contact Page Styles
+   Task 5: Contact Form + Info
+   ============================================ */
+
+/* ── Contact Hero ── */
+.contact-hero {
+  padding: 160px 0 60px;
+  text-align: center;
+}
+
+.contact-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  font-weight: 600;
+  color: #f5f5f5;
+  line-height: 1.25;
+  margin-bottom: 16px;
+}
+
+.contact-subtitle {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  color: #a0a0a0;
+}
+
+.gold-text { color: #d4a843; }
+
+.section-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  letter-spacing: 4px;
+  color: #d4a843;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+/* ── Layout ── */
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 60px;
+  padding-bottom: 80px;
+}
+
+/* ── Form ── */
+.contact-form-wrapper {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+  padding: 48px 40px;
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #c0c0c0;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+
+.required {
+  color: #d4a843;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 14px 16px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  color: #f5f5f5;
+  outline: none;
+  transition: border-color 0.3s, background 0.3s;
+  -webkit-appearance: none;
+  appearance: none;
+  box-sizing: border-box;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #555;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: rgba(212, 168, 67, 0.5);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.form-group select {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23888' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-color: rgba(255, 255, 255, 0.04);
+  padding-right: 40px;
+}
+
+.form-group select option {
+  background: #1a1a2e;
+  color: #f5f5f5;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* ── Phone Row ── */
+.phone-row {
+  display: flex;
+  gap: 12px;
+}
+
+.isd-select {
+  width: 140px !important;
+  flex-shrink: 0;
+}
+
+.phone-row input {
+  flex: 1;
+}
+
+/* ── Submit Buttons ── */
+.form-buttons {
+  display: flex;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.btn-whatsapp,
+.btn-email {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 24px;
+  border-radius: 12px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.btn-whatsapp {
+  background: #25D366;
+  color: #ffffff;
+}
+
+.btn-whatsapp:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.25);
+}
+
+.btn-email {
+  background: transparent;
+  color: #d4a843;
+  border: 1px solid rgba(212, 168, 67, 0.4);
+}
+
+.btn-email:hover {
+  transform: translateY(-2px);
+  border-color: #d4a843;
+  box-shadow: 0 8px 30px rgba(212, 168, 67, 0.1);
+}
+
+.btn-email svg {
+  stroke: #d4a843;
+}
+
+/* ── Contact Info ── */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.info-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 28px;
+}
+
+.info-card h3 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #d4a843;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.info-item:last-child {
+  margin-bottom: 0;
+}
+
+.info-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.info-item a,
+.info-item span {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  color: #d0d0d0;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.info-item a:hover {
+  color: #d4a843;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.social-link {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  color: #b0b0b0;
+  text-decoration: none;
+  transition: color 0.2s, transform 0.2s;
+  display: inline-block;
+}
+
+.social-link:hover {
+  color: #d4a843;
+  transform: translateX(4px);
+}
+
+.guarantee-card {
+  border-color: rgba(212, 168, 67, 0.15);
+  background: rgba(212, 168, 67, 0.03);
+}
+
+.guarantee-card p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: #a0a0a0;
+  line-height: 1.6;
+}
+
+/* ── Footer ── */
+.site-footer {
+  text-align: center;
+  padding: 32px 0;
+  border-top: 1px solid #1a1a1a;
+}
+
+.site-footer p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  color: #444;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .contact-title { font-size: 32px; }
+  .contact-hero { padding: 120px 0 40px; }
+  .contact-layout { grid-template-columns: 1fr; gap: 32px; }
+  .contact-form-wrapper { padding: 32px 24px; }
+  .form-buttons { flex-direction: column; }
+  .phone-row { flex-direction: column; }
+  .isd-select { width: 100% !important; }
+}
+
+@media (max-width: 480px) {
+  .contact-title { font-size: 26px; }
+  .contact-form-wrapper { padding: 24px 20px; }
+}

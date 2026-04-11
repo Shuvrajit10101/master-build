@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Apex Automations — We build intelligent automation systems for businesses worldwide. AI chatbots, workflow automation, websites, CRM setup, voice agents, and content automation.">
+  <meta name="keywords" content="automation agency, AI chatbot, workflow automation, CRM automation, website development, lead generation, business automation, n8n, AI voice agents">
+  <meta name="author" content="Apex Automations">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph (Social Sharing) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Apex Automations">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@HomeChoudhury">
+
+  <!-- Security Headers -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <!-- Theme Color (mobile browser bar) -->
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="msapplication-TileColor" content="#0a0a0a">
+
+  <!-- Preconnect for fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Page-specific -->
+  <title>Apex Automations | Intelligent Automation Solutions</title>
+  <meta property="og:title" content="Apex Automations | Intelligent Automation Solutions">
+  <meta property="og:description" content="We build intelligent automation systems for businesses worldwide. AI chatbots, workflow automation, CRM setup, and more — all on autopilot.">
+  <meta property="og:url" content="https://apexautomations.com">
+  <meta name="twitter:title" content="Apex Automations | Intelligent Automation Solutions">
+  <meta name="twitter:description" content="We build intelligent automation systems for businesses worldwide.">
+
+  <link rel="stylesheet" href="css/responsive-fixes.css" />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/ambient.css" />
+  <link rel="stylesheet" href="css/sections.css" />
+  <link rel="stylesheet" href="css/thunder.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+
+<body class="page-home">
+
+  <!-- Ambient background particles — sits behind everything -->
+  <canvas id="ambient-canvas"></canvas>
+
+  <!-- ========================================
+       Navigation — Top Bar
+  ======================================== -->
+  <nav class="nav-top">
+    <a href="index.html" class="nav-logo">APEX Automations</a>
+    <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+  </nav>
+
+  <!-- ========================================
+       Navigation — Full-Screen Overlay
+  ======================================== -->
+  <div class="nav-overlay" aria-hidden="true">
+    <div class="nav-overlay-inner">
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">HOME</a></li>
+        <li><a href="work.html" class="nav-link">WORK</a></li>
+        <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+      </ul>
+      <div class="nav-social">
+        <a href="#" class="social-link">LinkedIn</a>
+        <a href="#" class="social-link">X</a>
+        <a href="#" class="social-link">Instagram</a>
+      </div>
+      <div class="nav-email">homechoudhuryapex@gmail.com</div>
+    </div>
+  </div>
+
+  <!-- ========================================
+       Main Content
+  ======================================== -->
+  <main>
+
+    <!-- HERO SECTION -->
+    <section id="hero">
+      <canvas id="hero-canvas"></canvas>
+      <div class="hero-content">
+        <h1 class="hero-title" id="heroTitle">APEX AUTOMATIONS</h1>
+        <p class="hero-tagline" id="heroTagline"></p>
+        <div class="hero-scroll" id="heroScroll">
+          <span>SCROLL</span>
+          <div class="scroll-arrow"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT WE DO SECTION -->
+    <section id="what-we-do" class="section">
+      <div class="container">
+        <div class="section-label">WHAT WE DO</div>
+        <h2 class="section-heading wwd-heading">We build systems that<br><span class="gold-text">run your business on autopilot</span></h2>
+
+        <div class="wwd-cards">
+          <div class="wwd-card" data-animate="card">
+            <div class="wwd-icon">⚡</div>
+            <h3>Automate</h3>
+            <p>Workflows that run while you sleep — lead capture, follow-ups, invoicing, reporting — all on autopilot.</p>
+          </div>
+          <div class="wwd-card" data-animate="card">
+            <div class="wwd-icon">🤖</div>
+            <h3>Engage</h3>
+            <p>AI chatbots that convert website visitors into qualified leads 24/7 — in English, Hindi, or any language.</p>
+          </div>
+          <div class="wwd-card" data-animate="card">
+            <div class="wwd-icon">📈</div>
+            <h3>Scale</h3>
+            <p>CRM pipelines, content engines, and voice agents that grow with your business without adding headcount.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED WORK SECTION -->
+    <section id="featured-work" class="section">
+      <div class="container">
+        <div class="section-label">SELECTED WORK</div>
+        <h2 class="section-heading fw-heading">Projects that <span class="gold-text">deliver results</span></h2>
+
+        <div class="fw-grid">
+          <a href="https://smilecare-dental-psi.vercel.app/" target="_blank" class="fw-item" data-animate="project">
+            <div class="fw-overlay">
+              <span class="fw-tag">Healthcare</span>
+              <h3>SmileCare Dental Clinic</h3>
+              <p>AI appointment bot + responsive website. 24/7 patient booking with Hindi + English support.</p>
+              <span class="fw-link">Visit Live Site →</span>
+            </div>
+            <div class="fw-bg" style="background: linear-gradient(135deg, #0d4f4f 0%, #0a3a3a 100%);"></div>
+          </a>
+
+          <a href="https://primerealty-properties.vercel.app/" target="_blank" class="fw-item" data-animate="project">
+            <div class="fw-overlay">
+              <span class="fw-tag">Real Estate</span>
+              <h3>PrimeRealty Properties</h3>
+              <p>Lead qualifier bot with HOT/WARM/COLD scoring. Automated email alerts with lead cards.</p>
+              <span class="fw-link">Visit Live Site →</span>
+            </div>
+            <div class="fw-bg" style="background: linear-gradient(135deg, #0c1b2a 0%, #1a1040 100%);"></div>
+          </a>
+
+          <a href="https://growthpath-3.vercel.app/" target="_blank" class="fw-item" data-animate="project">
+            <div class="fw-overlay">
+              <span class="fw-tag">Education</span>
+              <h3>GrowthPath Academy</h3>
+              <p>Course advisor chatbot + lead magnet system. FAQ engine with counselor booking flow.</p>
+              <span class="fw-link">Visit Live Site →</span>
+            </div>
+            <div class="fw-bg" style="background: linear-gradient(135deg, #1a0a2e 0%, #2d1060 100%);"></div>
+          </a>
+        </div>
+
+        <div class="fw-cta">
+          <a href="work.html" class="btn-outline">See All Work →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section id="cta" class="section cta-section">
+      <div class="container">
+        <h2 class="cta-heading" data-animate="cta">Ready to <span class="gold-text">automate</span>?</h2>
+        <p class="cta-sub" data-animate="cta">Stop doing manually what a system can do for you 24/7.</p>
+        <a href="contact.html" class="btn-primary" data-animate="cta">Get In Touch →</a>
+
+        <div class="cta-contact" data-animate="cta">
+          <span>homechoudhuryapex@gmail.com</span>
+          <span>•</span>
+          <span>+91 70876 42005</span>
+          <span>•</span>
+          <span>Chandigarh, India</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================
+       Footer
+  ======================================== -->
+  <footer class="site-footer">
+    <p>© 2026 Apex Automations. All Rights Reserved.</p>
+  </footer>
+
+  <script src="js/ambient.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/hero.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/sections.js"></script>
+  <script src="js/thunder.js"></script>
+  <script src="js/performance.js"></script>
+  <script src="js/security.js"></script>
+</body>
+
+</html>

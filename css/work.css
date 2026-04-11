@@ -1,0 +1,423 @@
+/* ============================================
+   APEX AUTOMATIONS — Work Page Styles
+   Task 4: Portfolio + Services + Packages
+   ============================================ */
+
+/* ── Work Page Hero ── */
+.work-hero {
+  padding: 160px 0 80px;
+  text-align: center;
+}
+
+.work-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  font-weight: 600;
+  color: #f5f5f5;
+  line-height: 1.25;
+  margin-bottom: 16px;
+}
+
+.work-subtitle {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  color: #a0a0a0;
+}
+
+/* ── Portfolio Cards ── */
+.portfolio-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 60px;
+}
+
+.portfolio-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 320px;
+  display: block;
+  text-decoration: none;
+  border: 1px solid rgba(212, 168, 67, 0.08);
+  transition: border-color 0.4s;
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.portfolio-card:hover {
+  border-color: rgba(212, 168, 67, 0.3);
+}
+
+.portfolio-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+}
+
+.portfolio-card:hover .portfolio-bg {
+  transform: scale(1.04);
+}
+
+.portfolio-content {
+  position: relative;
+  z-index: 2;
+  padding: 40px 48px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: linear-gradient(to right, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.5) 50%, transparent 100%);
+}
+
+.portfolio-tag {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #d4a843;
+  font-weight: 700;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.portfolio-content h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  color: #f5f5f5;
+  margin-bottom: 12px;
+}
+
+.portfolio-details {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.4s ease;
+}
+
+.portfolio-card:hover .portfolio-details {
+  max-height: 300px;
+  opacity: 1;
+}
+
+.portfolio-details p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: #b0b0b0;
+  line-height: 1.5;
+  margin-bottom: 16px;
+  max-width: 500px;
+}
+
+.portfolio-tech {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.portfolio-tech span {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  color: #d4a843;
+  background: rgba(212, 168, 67, 0.1);
+  padding: 4px 12px;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+}
+
+.portfolio-results {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 16px;
+}
+
+.result-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.result-item strong {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #f5f5f5;
+}
+
+.result-item span {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  color: #888;
+}
+
+.portfolio-link {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  color: #d4a843;
+  letter-spacing: 1px;
+  display: inline-block;
+}
+
+/* ── Services Grid ── */
+#services {
+  padding: 120px 0;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.service-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 36px 28px;
+  transition: border-color 0.4s, transform 0.3s;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.service-card:hover {
+  border-color: rgba(212, 168, 67, 0.3);
+  transform: translateY(-4px);
+}
+
+.service-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: rgba(212, 168, 67, 0.2);
+  display: block;
+  margin-bottom: 16px;
+}
+
+.service-card h3 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #f5f5f5;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: #a0a0a0;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.service-price {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #d4a843;
+}
+
+.service-price span {
+  font-weight: 400;
+  color: #888;
+  font-size: 13px;
+}
+
+.services-cta {
+  text-align: center;
+}
+
+/* ── Packages Grid ── */
+#packages {
+  padding: 120px 0 80px;
+}
+
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.package-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+  padding: 40px 32px;
+  text-align: center;
+  position: relative;
+  transition: border-color 0.4s, transform 0.3s;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.package-card:hover {
+  border-color: rgba(212, 168, 67, 0.2);
+  transform: translateY(-4px);
+}
+
+.package-featured {
+  border-color: rgba(212, 168, 67, 0.4);
+  background: rgba(212, 168, 67, 0.03);
+}
+
+.package-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #d4a843;
+  color: #0a0a0a;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: 5px 18px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.package-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  color: #f5f5f5;
+  margin-bottom: 12px;
+}
+
+.package-price {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #d4a843;
+  margin-bottom: 4px;
+}
+
+.package-price span {
+  font-size: 16px;
+  font-weight: 400;
+  color: #888;
+}
+
+.package-desc {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 28px;
+}
+
+.package-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px;
+  text-align: left;
+}
+
+.package-card li {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: #b0b0b0;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.package-card li::before {
+  content: '✓ ';
+  color: #d4a843;
+  margin-right: 8px;
+}
+
+.package-card li:last-child {
+  border-bottom: none;
+}
+
+/* ── Shared utility classes (scoped to work page) ── */
+.section-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  letter-spacing: 4px;
+  color: #d4a843;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.section-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  font-weight: 600;
+  color: #f5f5f5;
+  line-height: 1.25;
+  margin-bottom: 60px;
+}
+
+.gold-text { color: #d4a843; }
+
+.btn-outline {
+  display: inline-block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #d4a843;
+  border: 1px solid rgba(212, 168, 67, 0.4);
+  padding: 14px 36px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s, border-color 0.3s;
+}
+.btn-outline:hover {
+  background: rgba(212, 168, 67, 0.08);
+  border-color: #d4a843;
+}
+
+.btn-primary {
+  display: inline-block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #0a0a0a;
+  background: #d4a843;
+  padding: 16px 48px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.2s;
+}
+.btn-primary:hover {
+  background: #e8c86a;
+  transform: translateY(-2px);
+}
+
+.site-footer {
+  text-align: center;
+  padding: 32px 0;
+  border-top: 1px solid #1a1a1a;
+}
+.site-footer p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  color: #444;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .work-title      { font-size: 32px; }
+  .work-hero       { padding: 120px 0 60px; }
+  .portfolio-card  { height: 260px; }
+  .portfolio-content { padding: 28px; }
+  .portfolio-content h3 { font-size: 22px; }
+  .portfolio-results { gap: 16px; }
+  .services-grid   { grid-template-columns: 1fr; }
+  .packages-grid   { grid-template-columns: 1fr; }
+  .section-heading { font-size: 30px; }
+}
+
+@media (max-width: 480px) {
+  .work-title      { font-size: 26px; }
+  .portfolio-card  { height: 220px; }
+  .portfolio-content { padding: 20px; }
+  .service-card    { padding: 28px 20px; }
+  .package-card    { padding: 32px 24px; }
+  .package-price   { font-size: 26px; }
+}
